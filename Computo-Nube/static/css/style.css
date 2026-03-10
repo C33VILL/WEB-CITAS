@@ -1,0 +1,95 @@
+:root {
+    --primary: #4e73df;
+    --secondary: #1cc88a;
+    --dark: #2c3e50;
+    --light: #f8f9fc;
+    --accent: #f6c23e;
+}
+
+body {
+    background-color: var(--light);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--dark);
+}
+
+/* Animación de entrada para el contenedor principal */
+.container {
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Estilo de Tarjetas */
+.card {
+    border: none;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+/* Botones con Micro-interacciones */
+.btn {
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.btn-success:hover {
+    background-color: var(--secondary);
+    transform: scale(1.05);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary);
+    transform: scale(1.05);
+}
+
+/* Estilo de los inputs */
+.form-control, .form-select {
+    border-radius: 8px;
+    border: 1px solid #d1d3e2;
+    transition: border-color 0.2s;
+}
+
+.form-control:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 0.2rem rgba(78, 115, 223, 0.25);
+}
+
+/* Tabla de citas animada */
+.table {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+tr {
+    transition: background-color 0.3s;
+}
+
+tr:hover {
+    background-color: rgba(28, 200, 138, 0.1);
+}
+
+/* Iconos o logos */
+.logo-vet {
+    font-size: 3rem;
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-10px);}
+    60% {transform: translateY(-5px);}
+}
